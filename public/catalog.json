@@ -1,0 +1,171 @@
+{
+  "updatedAt": "2024-10-20T00:00:00.000Z",
+  "genres": [
+    {
+      "id": "symphony",
+      "label": "Symphonies",
+      "description": "Monumental works for orchestra spanning the classical and romantic eras.",
+      "works": ["beethoven-5", "brahms-1", "tchaikovsky-5"]
+    },
+    {
+      "id": "concerto",
+      "label": "Concertos",
+      "description": "Virtuosic showcases for soloists and orchestra.",
+      "works": ["rachmaninoff-2", "mozart-21", "saint-saens-3"]
+    },
+    {
+      "id": "chamber",
+      "label": "Chamber Music",
+      "description": "Intimate performances for small ensembles and living rooms alike.",
+      "works": ["debusy-quartet", "schubert-trout", "bartok-contrasts"]
+    }
+  ],
+  "composers": [
+    {
+      "id": "beethoven",
+      "name": "Ludwig van Beethoven",
+      "era": "Classical",
+      "works": ["beethoven-5"],
+      "portraitUrl": "https://images.unsplash.com/photo-1520170352345-4d5211932797?auto=format&fit=crop&w=600&q=80"
+    },
+    {
+      "id": "brahms",
+      "name": "Johannes Brahms",
+      "era": "Romantic",
+      "works": ["brahms-1"],
+      "portraitUrl": "https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?auto=format&fit=crop&w=600&q=80"
+    },
+    {
+      "id": "tchaikovsky",
+      "name": "Pyotr Ilyich Tchaikovsky",
+      "era": "Romantic",
+      "works": ["tchaikovsky-5"],
+      "portraitUrl": "https://images.unsplash.com/photo-1523906630133-f6934a1ab2b9?auto=format&fit=crop&w=600&q=80"
+    },
+    {
+      "id": "rachmaninoff",
+      "name": "Sergei Rachmaninoff",
+      "era": "Late Romantic",
+      "works": ["rachmaninoff-2"],
+      "portraitUrl": "https://images.unsplash.com/photo-1507838153414-b4b713384a76?auto=format&fit=crop&w=600&q=80"
+    },
+    {
+      "id": "mozart",
+      "name": "Wolfgang Amadeus Mozart",
+      "era": "Classical",
+      "works": ["mozart-21"],
+      "portraitUrl": "https://images.unsplash.com/photo-1489710437720-ebb67ec84dd2?auto=format&fit=crop&w=600&q=80"
+    },
+    {
+      "id": "saint-saens",
+      "name": "Camille Saint-Saëns",
+      "era": "Romantic",
+      "works": ["saint-saens-3"],
+      "portraitUrl": "https://images.unsplash.com/photo-1511379938547-c1f69419868d?auto=format&fit=crop&w=600&q=80"
+    },
+    {
+      "id": "debussy",
+      "name": "Claude Debussy",
+      "era": "Impressionist",
+      "works": ["debusy-quartet"],
+      "portraitUrl": "https://images.unsplash.com/photo-1511379938547-c1f69419868d?auto=format&fit=crop&w=600&q=80"
+    },
+    {
+      "id": "schubert",
+      "name": "Franz Schubert",
+      "era": "Early Romantic",
+      "works": ["schubert-trout"],
+      "portraitUrl": "https://images.unsplash.com/photo-1511379938547-c1f69419868d?auto=format&fit=crop&w=600&q=80"
+    },
+    {
+      "id": "bartok",
+      "name": "Béla Bartók",
+      "era": "Modern",
+      "works": ["bartok-contrasts"],
+      "portraitUrl": "https://images.unsplash.com/photo-1511379938547-c1f69419868d?auto=format&fit=crop&w=600&q=80"
+    }
+  ],
+  "works": [
+    {
+      "id": "beethoven-5",
+      "title": "Symphony No. 5 in C minor, Op. 67",
+      "composerId": "beethoven",
+      "year": 1808,
+      "duration": "31 min",
+      "description": "Perhaps the most recognizable opening in classical music, this symphony charts a triumphant journey from darkness to light.",
+      "youtubeId": "_4IRMYuE1hI"
+    },
+    {
+      "id": "brahms-1",
+      "title": "Symphony No. 1 in C minor, Op. 68",
+      "composerId": "brahms",
+      "year": 1876,
+      "duration": "45 min",
+      "description": "Brahms labored for two decades on this majestic first symphony, a worthy heir to Beethoven's legacy.",
+      "youtubeId": "E9w5BQuQKQk"
+    },
+    {
+      "id": "tchaikovsky-5",
+      "title": "Symphony No. 5 in E minor, Op. 64",
+      "composerId": "tchaikovsky",
+      "year": 1888,
+      "duration": "48 min",
+      "description": "Lush melodies and sweeping orchestration explore fate and resilience in Tchaikovsky's beloved fifth symphony.",
+      "youtubeId": "5PO2DpLRNbs"
+    },
+    {
+      "id": "rachmaninoff-2",
+      "title": "Piano Concerto No. 2 in C minor, Op. 18",
+      "composerId": "rachmaninoff",
+      "year": 1901,
+      "duration": "37 min",
+      "description": "A Romantic showcase packed with soaring melodies and pianistic fireworks.",
+      "youtubeId": "rEGOihjqO9w"
+    },
+    {
+      "id": "mozart-21",
+      "title": "Piano Concerto No. 21 in C major, K. 467",
+      "composerId": "mozart",
+      "year": 1785,
+      "duration": "30 min",
+      "description": "Nicknamed 'Elvira Madigan,' this concerto pairs grace and wit with Mozart's signature lyricism.",
+      "youtubeId": "df-eLzao63I"
+    },
+    {
+      "id": "saint-saens-3",
+      "title": "Symphony No. 3 in C minor, Op. 78 'Organ'",
+      "composerId": "saint-saens",
+      "year": 1886,
+      "duration": "35 min",
+      "description": "A thrilling orchestral tapestry crowned by the mighty organ.",
+      "youtubeId": "yPea4yjZ4f0"
+    },
+    {
+      "id": "debusy-quartet",
+      "title": "String Quartet in G minor, Op. 10",
+      "composerId": "debussy",
+      "year": 1893,
+      "duration": "26 min",
+      "description": "Debussy brings impressionistic color to the traditional string quartet form.",
+      "youtubeId": "EN1nM8pBzH4"
+    },
+    {
+      "id": "schubert-trout",
+      "title": "Piano Quintet in A major, D. 667 'Trout'",
+      "composerId": "schubert",
+      "year": 1819,
+      "duration": "40 min",
+      "description": "A sparkling chamber favorite with variations on Schubert's song 'Die Forelle'.",
+      "youtubeId": "3t4DyU4if6A"
+    },
+    {
+      "id": "bartok-contrasts",
+      "title": "Contrasts for Clarinet, Violin, and Piano, Sz. 111",
+      "composerId": "bartok",
+      "year": 1938,
+      "duration": "17 min",
+      "description": "A rhythmically charged trio commissioned by Benny Goodman, blending folk motives with modern bite.",
+      "youtubeId": "bo0xKxO2-Aw"
+    }
+  ]
+}
