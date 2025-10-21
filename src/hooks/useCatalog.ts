@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from 'react';
+import { BASE_PATH } from '../utils/useBasePath';
 
 export type CatalogWork = {
   id: string;
@@ -50,8 +51,7 @@ export const useCatalog = () => {
     let cancelled = false;
     const load = async () => {
       try {
-        const base = import.meta.env.VITE_BASE_PATH || '';
-        const prefix = base && base !== '/' ? base.replace(/\/$/, '') : '';
+        const prefix = BASE_PATH === '/' ? '' : BASE_PATH;
         const catalogUrl = prefix ? `${prefix}/catalog.json` : '/catalog.json';
         const response = await fetch(catalogUrl, { cache: 'no-cache' });
         if (!response.ok) {
