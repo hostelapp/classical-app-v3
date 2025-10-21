@@ -1,24 +1,46 @@
 import { useEffect, useState } from 'react';
 
-const normalizePath = (pathname: string, basePath: string) => {
-  if (!basePath || basePath === '/' || !pathname.startsWith(basePath)) {
-    return pathname;
+const sanitizeBasePath = (rawBasePath: string | undefined) => {
+  if (!rawBasePath || rawBasePath === '/') {
+    return '/';
   }
-  const normalized = pathname.replace(basePath, '/') || '/';
-  return normalized.endsWith('/') && normalized.length > 1
-    ? normalized.slice(0, -1)
-    : normalized;
+
+  const trimmed = rawBasePath.replace(/^\/+|\/+$/g, '');
+  return trimmed ? `/${trimmed}` : '/';
 };
 
+const normalizePath = (pathname: string, basePath: string) => {
+  if (!basePath || basePath === '/') {
+    return pathname || '/';
+  }
+
+  if (!pathname.startsWith(basePath)) {
+    return pathname || '/';
+  }
+
+  const nextChar = pathname.charAt(basePath.length);
+  if (nextChar && nextChar !== '/') {
+    return pathname || '/';
+  }
+
+  const remainder = pathname.slice(basePath.length) || '/';
+  return remainder.startsWith('/') ? remainder : `/${remainder}`;
+};
+
+const BASE_PATH = sanitizeBasePath(
+  (import.meta.env.VITE_BASE_PATH as string | undefined) ??
+    (import.meta.env.BASE_URL as string | undefined) ??
+    '/',
+);
+
 export const useBasePath = () => {
-  const basePath = import.meta.env.VITE_BASE_PATH || '/';
-  const [currentPath, setCurrentPath] = useState(() => normalizePath(window.location.pathname, basePath));
+  const [currentPath, setCurrentPath] = useState(() => normalizePath(window.location.pathname, BASE_PATH));
 
   useEffect(() => {
-    const handler = () => setCurrentPath(normalizePath(window.location.pathname, basePath));
+    const handler = () => setCurrentPath(normalizePath(window.location.pathname, BASE_PATH));
     window.addEventListener('popstate', handler);
     return () => window.removeEventListener('popstate', handler);
-  }, [basePath]);
+  }, []);
 
-  return { currentPath, basePath: basePath === '/' ? '' : basePath };
+  return { currentPath, basePath: BASE_PATH === '/' ? '' : BASE_PATH };
 };
