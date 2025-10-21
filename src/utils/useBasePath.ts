@@ -27,7 +27,7 @@ const normalizePath = (pathname: string, basePath: string) => {
   return remainder.startsWith('/') ? remainder : `/${remainder}`;
 };
 
-export const BASE_PATH = sanitizeBasePath(
+const BASE_PATH = sanitizeBasePath(
   (import.meta.env.VITE_BASE_PATH as string | undefined) ??
     (import.meta.env.BASE_URL as string | undefined) ??
     '/',
